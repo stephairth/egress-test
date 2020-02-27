@@ -1,0 +1,1009 @@
+$egress-blue: #00A0E4;
+$deep-blue: #001560;
+$cool-grey: #818BB0;
+$cyan: #3DDEF8;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #F9FAFB;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+// Header Nav 1 (blue) Styles
+header {
+    #blue-container {
+        background-color: $egress-blue;
+        padding: 5px 0px;
+
+        #nav-1 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 0.85rem;
+        
+            button {
+                margin-right: 1rem;
+                background-color: transparent;
+                border: none;
+        
+                i {
+                    color: #fff;
+                }
+            }
+            
+            ul {
+                display: flex;
+                align-items: center;
+                color: #fff;
+        
+                li {
+                    margin-right: 1rem;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                li:hover a {
+                    color: $deep-blue;
+                    transition: 0.3s;
+                }
+            }
+        
+        }
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px) {
+    header #nav-1 {
+        margin: 0 5%;
+    }
+}
+
+// ipad pro and large tablets
+@media only screen and (min-width: 1024px) {
+
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px) {
+    header #nav-1 {
+        margin: 0 10%;
+        font-size: 1rem;
+    }
+}
+
+// Header Nav 2 (white) Styles
+header {
+    #white-container {
+        background-color: #fff;
+        padding: 5px 0px;
+
+        #nav-2 {
+            padding: 10px 15px;
+
+            img {
+                height: 26px;
+                width: 120px;
+                display: flex;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px) {
+    header #white-container {
+        #nav-2 {
+            margin: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin-left: 1rem;
+                    color: $cool-grey;
+
+                    #book-demo {
+                        background-color: #D82B64;
+                        padding: 8px 25px;
+                        border: none;
+                        color: #fff;
+                        font-weight: 700;
+                        border-radius: 15px;
+                        font-size: 0.75rem;
+                        border: 1px solid transparent;
+                    }
+
+                    #book-demo:hover {
+                        background-color: #fff;
+                        color: #D82B64;
+                        border: 1px solid #D82B64;
+                        transition: 0.3s;
+                    }
+                }
+
+                li a:hover {
+                    color: $deep-blue;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+
+// ipad pro and large tablets
+@media only screen and (min-width: 1024px) {
+
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px) {
+    header #white-container #nav-2 {
+        margin: 0 10%;
+        font-size: 1rem;
+    }
+}
+
+// Main Section 1: Hero Styles
+#hero {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    color: #fff;
+    background-color: #000;
+
+    #image-container {
+        opacity: 50%;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+        }
+    }
+
+    .content-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 100%;
+        z-index: 1;
+        padding: 1rem;
+
+        .navigation {
+            display: none;
+
+            a:hover {
+                color: $egress-blue;
+                transition: 0.3s;
+            }
+
+            i {
+                margin: 0 0.5rem;
+            }
+        }
+
+        h3 {
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        #learn-more {
+            background-color: $egress-blue;
+            padding: 8px 25px;
+            border: none;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        #learn-more:hover {
+            background-color: #fff;
+            color: $egress-blue;
+            transition: 0.3s;
+        }
+    }
+}
+
+// ipad and small tablets 
+@media only screen and (min-width: 768px) {
+    #hero {
+        .content-area { 
+            margin: 0 5%;
+            width: 50vw;
+    
+            .navigation {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px) {
+    #hero {
+        .content-area { 
+            margin: 0 10%;
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// Main Section 2: What We Do
+#what-we-do {
+    width: 100%;
+
+    #wwd-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        color: $deep-blue;
+
+        h2 {
+            padding: 1rem;
+        }
+
+        p {
+            padding-bottom: 1rem;
+        }
+    }
+
+    #example-tiles {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+        
+
+        .tile {
+            width: 90%;
+            border: 1px solid #E9EAEB;
+            margin-bottom: 1rem;
+            color: $deep-blue;
+
+            .tile-img-container {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 125px;
+                    object-fit: cover;
+                }
+            }
+
+            h6 {
+                font-size: 1rem;
+                padding: 0.75rem 0 0.5rem 0.5rem;
+
+                a:hover {
+                    color: $egress-blue;
+                    transition: 0.3s;
+                }
+
+                i {
+                    color: #D62C64;
+                }
+            }
+
+            p {
+                font-size: 0.75rem;
+                padding: 0 0 0.5rem 0.5rem;
+            }
+
+            p:last-of-type {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px){
+    #what-we-do {
+        #wwd-container {
+            margin: 0 10%;
+            padding-bottom: 2rem;
+    
+            h2 {
+                padding: 3rem 0 2rem 0;
+            }
+        }
+    
+        #example-tiles {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .tile {
+                width: 41%;
+                margin: 0.5rem;
+            }
+        }
+    }
+}
+
+// laptops and larger:
+@media only screen and (min-width: 1200px){
+    #what-we-do {
+        #wwd-container {
+            margin: 0 15%;
+        }
+
+        #example-tiles .tile {
+            width: 38%;
+            margin: 0.5rem;
+        }
+    }
+}
+
+// Main Section 3: People Styles
+#people {
+    width: 100%;
+    padding-bottom: 2rem;
+
+    .people-container h2 {
+        color: $deep-blue;
+        padding: 1rem;
+    }
+
+    #people-grid {
+        margin: 0 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .person-tile {
+            position: relative;
+            width: 50%;
+            background-color: #000;
+
+            .person-name {
+                position: absolute;
+                bottom: 25px;
+                left: 0px;
+                background-color: #fff;
+                padding: 0.25rem 10%;
+                border-bottom: 3px solid $egress-blue;
+                font-size: 0.75rem;
+                color: $deep-blue;
+                font-weight: 700;
+            }
+
+            .hover-info {
+                display: none;
+
+                p, a {
+                    padding: 1rem;
+                }
+
+                a {
+                    font-weight: 700;
+                }
+
+                i {
+                    color: #D82B64;
+                }
+            }
+          }
+          
+        //   responsive square (height matches responsive width)
+          .person-tile:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+
+          .person-tile:hover .person-name {
+            display: none;
+            transition: 0.3s;
+          }
+
+          .person-tile:hover img {
+              opacity: 0.4;
+              transition: 0.3s;
+          }
+
+          .person-tile:hover .hover-info {
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              display: flex;
+              flex-direction: column;
+              color: #fff;
+              max-width: 100%;
+              max-height: 100%;
+          }
+          
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+}
+}
+
+@media only screen and (min-width: 768px){
+    #people {
+        padding: 0 5%;
+
+        #people-grid .person-tile {
+            width: 33%;
+
+            .person-name {
+                font-size: 1rem;
+                padding: 0.75rem 15%;
+            }
+          }
+    }   
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px){
+    #people {
+        padding: 0 10%;
+    }
+}
+
+// Main Section 4: History(1) Styles
+#history-1 {
+    width: 100%;
+    color: $deep-blue;
+    padding-bottom: 1rem;
+
+    .history-container {
+        padding: 1rem;
+
+        h2 {
+            padding-bottom: 1rem;
+        }
+
+        .history-tile {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #E9EAEB;
+            position: relative;
+
+            .tile-tracker {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                display: flex;
+                align-items: flex-end;
+
+                p {
+                    padding-right: 2rem;
+
+                    .big-1 {
+                        font-size: 4rem;
+                        color: $deep-blue;
+                        font-weight: 700;
+                        line-height: 0;
+                    }
+
+                    .small-3 {
+                        font-size: 1rem;
+                        color: $cool-grey;
+                        position: absolute;
+                        bottom: 33px;
+                    }
+                }
+
+                button {
+                    height: 50px;
+                    width: 50px;
+                    border: 1px solid #fff;
+                    border-radius: 5px;
+                    
+                    i {
+                        color: #fff;
+                    }
+                }
+
+                .active {
+                    background-color: $deep-blue;
+                    cursor: pointer;
+                }
+
+                .inactive {
+                    background-color: $cool-grey;
+                }
+            }
+            
+            .history-img {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 175px;
+                    object-fit: cover;
+                }
+            }
+
+            .history-text {
+                width: 100%;
+                padding-bottom: 4rem;
+
+                h3 {
+                    padding: 1rem;
+                }
+
+                p {
+                    padding: 0.5rem 1rem 0rem 1rem;
+                    font-size: 0.75rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px){
+    #history-1 .history-container {
+        margin: 0 5%;
+
+        .history-tile {
+            flex-direction: row;
+            margin: 1rem;
+    
+            .history-img {
+                width: 100%;
+            }
+    
+            .history-text {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px){
+    #history-1 .history-container {
+        margin: 0 10%;
+
+        .history-tile {
+            margin: 0;
+
+            .history-img {
+                height: 300px;
+                
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+
+            .history-text p {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+    
+}
+
+// Main Section 5: Resources Styles
+
+#resources {
+    width: 100%;
+    color: $deep-blue;
+
+    h2 {
+        margin-left: 1rem;
+    }
+
+    .resources-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        
+
+        .main-resource-tile {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid #E9EAEB;
+
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            h3 {
+                padding: 1rem;
+            }
+
+            h3:hover {
+                color: $egress-blue;
+                transition: 0.3s;
+            }
+
+            p {
+                padding: 0 0.5rem 1rem 1rem;
+            }
+
+            p:last-of-type {
+                padding-bottom: 1rem;
+            }
+        }
+
+        // should be row and images smaller | sort
+        .small-resource-tiles {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            
+    
+            .resource-tile {
+                border: 1px solid #E9EAEB;
+                margin-bottom: 1rem;
+                color: $deep-blue;
+                display: flex;
+                flex-direction: row;
+    
+                .sml-res-img-container {
+                    width: 30%;
+                    height: 75px;
+    
+                    img {
+                        width: 100%;
+                        height: 75px;
+                        object-fit: cover;
+                    }
+                }
+
+                h6 {
+                    font-size: 1rem;
+                    padding: 0.75rem 0 0.5rem 0.5rem;
+
+                    i {
+                        color: #D82B64;
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                h6:hover {
+                    color: $egress-blue;
+                    transition: 0.3s;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                    padding: 0 0 0.5rem 0.5rem;
+                }
+            }
+
+            .resource-tile:first-of-type {
+                margin-top: 1rem;
+            }
+}
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px){
+    #resources {
+        h2 {
+            margin: 0 5%;
+            padding-left: 1rem;
+        }
+
+        .resources-container {
+            flex-direction: row;
+            margin: 0 5%;
+    
+            .main-resource-tile {
+                width: 50%;
+                margin-right: 1rem;
+            }
+    
+            .small-resource-tiles {
+                width: 50%;
+                padding-bottom: 0;
+    
+                .resource-tile {
+                    .sml-res-img-container {
+                        height: 125px;
+                        img {
+                            height: 125px;
+                        }
+                    }
+                }
+    
+                .resource-tile:first-of-type {
+                    margin-top: 0;
+                }
+    
+                .resource-tile:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px){
+    #resources {
+        margin-bottom: 100px;
+
+        .resources-container, h2 {
+            margin: 0 10%;
+        }
+    }
+}
+
+// Footer Section 1: Links, Newsletter and Social Styles 
+
+#links-news-soc {
+    background-color: $deep-blue;
+    color: #fff;
+    border-bottom: 10px solid $cyan;
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+
+        .products, 
+        .about-account, 
+        .support, 
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 2rem 1rem 2rem;
+        }
+
+        .about, 
+        .account {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about {
+            padding-bottom: 2rem;
+        }
+
+        h6 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 0.25rem;
+            border-bottom: 5px solid $cyan;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+
+        ul li {
+            line-height: 2rem;
+        }
+
+        ul li a:hover {
+            color: $egress-blue;
+            transition: 0.3s;
+        }
+
+        .newsletter {
+            input {
+                width: 100%;
+                height: 3rem;
+                margin: 0.5rem 0;
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            .caution {
+                font-size: 0.75rem;
+            }
+
+            button {
+                background-color: $egress-blue;
+                color: #fff;
+                border: none;
+                padding: 0.75rem 3rem;
+                border-radius: 25px;
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 1rem 0;
+            }
+
+            button:hover {
+                background-color: #D82B64;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        color: $cool-grey;
+        padding: 0rem 2rem 1rem 2rem;
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+
+            i {
+                margin: 0 0.25rem;
+            }
+
+            a:hover i {
+                color: #fff;
+                transition: 0.3s;
+            }
+        }
+        
+        .copyright {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .privacy {
+            display: flex;
+            flex-direction: row;
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            a {
+                color: $cool-grey;
+                text-decoration: underline;
+                margin-right: 0.5rem;
+            }
+
+            a:hover {
+                color: #fff;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+// ipad and small tablets
+@media only screen and (min-width: 768px){
+    #links-news-soc {
+        padding: 1rem 5%;
+
+        .links {
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            .products, .about-account, .support, .newsletter {
+                width: 50%;
+    
+                input {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    
+    
+}
+
+// laptop and larger
+@media only screen and (min-width: 1200px){
+    #links-news-soc {
+        padding: 1rem 10%;
+
+        .links {
+            flex-wrap: nowrap;
+        }
+
+        .social {
+            padding-top: 1rem;
+        }
+    }
+}
+
+// Footer Section 2: History Styles
+
+#history-2 {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px){
+    #history-2  {
+        display: flex;
+        padding-top: 100px;
+
+        h2 {
+            margin: 1rem 10%;
+            padding: 1rem;
+            color: $deep-blue;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: row;
+            margin: 0 10%;
+            justify-content: center;
+            padding-bottom: 100px;
+        
+            .year-set-big {
+                width: 32%;
+                padding-right: 1rem;
+            }
+        
+            .year-set-small {
+                width: 16%;
+                padding-right: 1rem;
+            }
+    
+            .year-set-small:last-of-type {
+                padding-right: 0;
+            }
+    
+            h6 {
+                width: 100%;
+                font-weight: 700;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-bottom-right-radius: 20px;
+                margin-bottom: 1rem;
+            }
+    
+            .blue {
+                background-color: $egress-blue;
+            }
+    
+            .purple {
+                background-color: #4C2D92;
+            }
+    
+            p {
+                font-size: 0.75rem;
+                color: $deep-blue;
+                line-height: 1.5;
+            }
+        }
+    }
+}
